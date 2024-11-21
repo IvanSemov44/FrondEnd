@@ -1,9 +1,9 @@
 import { Button } from '@mui/material';
-import CompanyCard from '../components/CompanyCard';
-import useCompanies from '../hooks/useCompanies';
+import ItemCard from '../components/ItemCard';
+import useItems from '../hooks/useItems';
 
-const HomePage = () => {
-    const { data, isLoading, error } = useCompanies();
+const CatalogPage = () => {
+    const { data, isLoading, error } = useItems();
 
     function handleClick() {
 
@@ -17,7 +17,7 @@ const HomePage = () => {
     return (
         <>
             {
-                data?.map(company => <CompanyCard key={company.id} company={company} />)
+                data?.map(item => <ItemCard key={item.id} item={item} />)
             }
 
             <Button variant='outlined' onClick={() => handleClick()}>Hello World</Button>
@@ -25,4 +25,4 @@ const HomePage = () => {
     )
 }
 
-export default HomePage
+export default CatalogPage

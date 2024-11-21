@@ -20,6 +20,11 @@ const NavBar = () => (
                 <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                     News
                 </Typography>
+                <Link to="catalog">
+                    <Button>
+                        Catalog
+                    </Button>
+                </Link>
                 <Link to="login">
                     <Button color="warning">
                         Login
