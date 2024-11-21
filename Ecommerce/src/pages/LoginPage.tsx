@@ -1,8 +1,10 @@
-import { Typography } from "@mui/material"
+import { Box, Typography } from "@mui/material"
 
 const LoginPage = () => {
     return (
-        <Typography>Login Page</Typography>
+        <Box padding={4}>
+            <Typography>Login Page</Typography>
+        </Box>
     )
 }
 

@@ -1,11 +1,12 @@
 import MenuIcon from '@mui/icons-material/Menu';
 import { AppBar, Box, Button, IconButton, Toolbar, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
 
-const NavBar = () => {
-    return (
-        <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static">
-                <Toolbar>
+const NavBar = () => (
+    <Box sx={{ flexGrow: 1 }}>
+        <AppBar position="static" color="default">
+            <Toolbar>
+                <Link to="/">
                     <IconButton
                         size="large"
                         edge="start"
@@ -15,14 +16,18 @@ const NavBar = () => {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                        News
-                    </Typography>
-                    <Button color="inherit">Login</Button>
-                </Toolbar>
-            </AppBar>
-        </Box>
-    )
-}
+                </Link>
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                    News
+                </Typography>
+                <Link to="login">
+                    <Button color="warning">
+                        Login
+                    </Button>
+                </Link>
+            </Toolbar>
+        </AppBar>
+    </Box>
+)
 
 export default NavBar

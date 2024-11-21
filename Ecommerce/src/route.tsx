@@ -1,7 +1,7 @@
-import { Login } from "@mui/icons-material";
 import { createBrowserRouter } from "react-router-dom";
 import Hello from "./components/Hello";
 import Layout from "./pages/Layout";
+import LoginPage from "./pages/LoginPage";
 
 const router = createBrowserRouter(
     [
@@ -10,7 +10,7 @@ const router = createBrowserRouter(
             element: <Layout />,
             children: [
                 { index: true, element: <Hello /> },
-                { path: "/login", element: <Login /> }
+                { path: "/login", element: <LoginPage /> }
             ]
         }
     ],
